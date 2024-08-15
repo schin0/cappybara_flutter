@@ -48,45 +48,55 @@ class EventoScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 80,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Image.asset(
-                    evento.imagem!,
-                    height: 146,
-                    width: double.maxFinite,
-                    fit: BoxFit.cover,
-                  ),
+              padding: const EdgeInsets.only(left: 0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 159,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFDDDDDD)),
+                      margin: const EdgeInsets.only(right: 15, left: 40),
+                      child: Icon(Icons.image, size: 60, color: Colors.grey),
+                    ),
+                    Container(
+                      width: 80,
+                      height: 129,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFDDDDDD)),
+                      margin: const EdgeInsets.only(right: 15),
+                      child: Icon(Icons.image, size: 60, color: Colors.grey),
+                    ),
+                    Container(
+                      width: 80,
+                      height: 129,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFDDDDDD)),
+                      margin: const EdgeInsets.only(right: 15),
+                      child: Icon(Icons.image, size: 60, color: Colors.grey),
+                    ),
+                    Container(
+                      width: 80,
+                      height: 129,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFFDDDDDD)),
+                      margin: const EdgeInsets.only(right: 15),
+                      child: Icon(Icons.image, size: 60, color: Colors.grey),
+                    ),
+                  ],
                 ),
-                Container(
-                  width: 80,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Icon(Icons.image, size: 50, color: Colors.grey),
-                ),
-                Container(
-                  width: 80,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Icon(Icons.image, size: 50, color: Colors.grey),
-                ),
-              ],
-            ),
-          ),
+              )),
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -100,7 +110,7 @@ class EventoScreen extends StatelessWidget {
                 SizedBox(height: 10),
                 Text(
                   "Atração de exemplo, com notas altas pelos visitantes.",
-                  style: TextStyle(fontSize: 14, color: Colors.black54),
+                  style: TextStyle(fontSize: 17, color: Colors.black),
                 ),
               ],
             ),
@@ -125,12 +135,11 @@ class EventoScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 100),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                padding: EdgeInsets.symmetric(vertical: 15)
-              ),
+                  backgroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 15)),
               onPressed: () {},
               child: Center(
                 child: Text(
