@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 import '../widgets/evento_interesse_widget.dart';
+import '../widgets/menu_navegacao_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -50,14 +51,15 @@ class HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     SizedBox(height: 24),
-                    _buildMelhoresAvaliacoes(context)
+                    _buildMelhoresAvaliacoes(context),
+                    SizedBox(height: 24),
                   ],
                 ),
               ),
             ],
           ),
         ),
-        bottomNavigationBar: _buildMenuNavegacao(context),
+        bottomNavigationBar: MenuNavegacao(),
       ),
     );
   }
@@ -158,57 +160,6 @@ class HomeScreenState extends State<HomeScreen> {
             },
           );
         },
-      ),
-    );
-  }
-
-  Widget _buildMenuNavegacao(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      width: double.maxFinite,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40),
-          border: Border.all(
-            color: Color(0XFF000000),
-            width: 2,
-          ),
-        ),
-        child: BottomNavigationBar(
-          backgroundColor: Colors.transparent,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          elevation: 0,
-          type: BottomNavigationBarType.fixed,
-          items: [
-            BottomNavigationBarItem(
-              // TODO: Criar botão HOME
-              icon: SizedBox(
-                height: 44,
-                width: 44,
-                child: SvgPicture.asset("assets/images/lupa.svg"),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: SizedBox(
-                height: 44,
-                width: 44,
-                child: SvgPicture.asset("assets/images/lupa.svg"),
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: SizedBox(
-                height: 44,
-                width: 44,
-                child: SvgPicture.asset("assets/images/calendario.svg"),
-              ),
-              label: '',
-            ),
-          ],
-        ),
       ),
     );
   }
