@@ -1,6 +1,8 @@
+import 'package:cappybara_flutter/models/city_model.dart';
 import 'package:flutter/material.dart';
 import '../models/evento_card_model.dart';
 import '../widgets/menu_navegacao_widget.dart';
+import 'map_screen.dart';
 
 class EventoScreen extends StatelessWidget {
   final EventoCardModel evento;
@@ -117,16 +119,15 @@ class EventoScreen extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 60),
             child: Container(
-              height: 200,
+              height: 250,
               width: double.infinity,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
-                borderRadius: BorderRadius.circular(10),
               ),
               child: Center(
-                child: Text("Mapa Aqui"),
+                child: MapScreen(City('FIAP - Lins', 'São Paulo', -23.595157, -46.687052)),
               ),
             ),
           ),
