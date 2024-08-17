@@ -1,3 +1,4 @@
+import 'package:cappybara_flutter/screens/busca_screen.dart';
 import 'package:cappybara_flutter/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import '../routes/app_routes.dart';
@@ -63,7 +64,18 @@ class MenuNavegacao extends StatelessWidget {
                     Icons.search,
                     color: Colors.black,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    final currentRoute = ModalRoute.of(context)?.settings.name;
+                    if (currentRoute != "/busca_screen") {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BuscaScreen(),
+                          settings: RouteSettings(name: AppRoutes.buscaScreen),
+                        ),
+                      );
+                    }
+                  },
                 ),
               ),
               label: '',

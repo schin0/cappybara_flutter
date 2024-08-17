@@ -4,6 +4,7 @@ import '../screens/home_screen.dart';
 class AppRoutes {
   static const String homeScreen = '/home_screen';
   static const String eventoScreen = '/evento_screen';
+  static const String buscaScreen = '/busca_screen';
 
   static const String rotaInicial = '/rotaInicial';
 
